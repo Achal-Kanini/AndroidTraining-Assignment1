@@ -7,60 +7,47 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/Red"
-        android:layout_width="89dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="52dp"
-        android:background="@drawable/button_background"
-        android:text="Red"
-        android:textAlignment="center"
-        android:textColor="#880A0A"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/Green"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
         android:id="@+id/Green"
         android:layout_width="89dp"
         android:layout_height="47dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_background"
-        android:text="Green"
+        android:text="Click Me"
         android:textAlignment="center"
         android:textColor="#4CAF50"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/ClickCount"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/Blue"
-        android:layout_width="89dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="52dp"
-        android:background="@drawable/button_background"
-        android:text="Blue"
-        android:textAlignment="center"
-        android:textColor="#3F51B5"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/Red"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ClickCount" />
 
     <TextView
         android:id="@+id/ClickCount"
         android:layout_width="145dp"
         android:layout_height="41dp"
-        android:layout_marginBottom="232dp"
-        android:text="Clicked Color"
+        android:layout_marginTop="40dp"
+        android:text="Click Count"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameText"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        android:hint="ENter Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Green">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
