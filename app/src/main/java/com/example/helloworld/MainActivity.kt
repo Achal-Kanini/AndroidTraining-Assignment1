@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import com.google.android.material.textfield.TextInputLayout
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
     var FinalCount = 0
     var CountsMap = mutableMapOf<String,Int>("Somebody" to 0)
+    var SelectedNum = Random(System.nanoTime()).nextInt(0, 1001)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,25 +24,21 @@ class MainActivity : AppCompatActivity() {
 
         ClickGreen.setOnClickListener{
 
-            val userName = UserNameENterView.editText?.text?.toString()
-            val maskedName =
-                if (userName.isNullOrEmpty()) "Somebody"
-                else userName
+            val guessednum:Int = UserNameENterView.editText?.text.toString().toInt()
+            var guessText = ""
 
-            if(maskedName in CountsMap){
-                var count = CountsMap.get(maskedName)
-                if(count != null){
-                    count+=1
-                    CountsMap.put(maskedName,count)
-                    FinalCount = count
-                }
+            if (guessednum < SelectedNum){
+                guessText = "No:) My number is bigger"
+            }
+            else if (guessednum > SelectedNum){
+                guessText = "No:) My number is smaller"
             }
             else{
-                CountsMap.put(maskedName,1)
-                FinalCount = 1
+                guessText = "You are Right!!"
             }
 
-            ClickColorView.text = "$maskedName was clicked $FinalCount times"
+
+            ClickColorView.text = "$guessText"
         }
     }
 

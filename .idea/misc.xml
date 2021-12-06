@@ -4,7 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Admin/Documents/AndroidDevelopmentTraining/app/src/main/res/drawable/button_background.xml" value="0.19583333333333333" />
-        <entry key="..\:/Users/Admin/Documents/AndroidDevelopmentTraining/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Admin/Documents/AndroidDevelopmentTraining/app/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>
   </component>
@@ -13,5 +13,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.22" />
+      </ProjectState>
+    </option>
   </component>
 </project>
